@@ -8,6 +8,16 @@
 	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 	})(window,document,'script','dataLayer','GTM-P99HMFN');</script>
 	<!-- End Google Tag Manager -->
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-N7QZPC68Q2"></script>
+	<script>
+	  //window.dataLayer = window.dataLayer || [];
+	  //function gtag(){dataLayer.push(arguments);}
+	  //gtag('js', new Date());
+
+	  //gtag('config', 'G-N7QZPC68Q2');
+	</script>
+	<!-- End Google tag (gtag.js) -->
     <title>My Home Page</title>
     <style>
       body {
@@ -18,6 +28,34 @@
         display: block;
         margin: 0 auto;
         width: 200px;
+      }
+      #feedback-form {
+        margin: 20px auto;
+        max-width: 400px;
+      }
+      label {
+        display: block;
+        margin-bottom: 5px;
+      }
+      input[type="text"], input[type="email"], input[type="radio"], textarea {
+        display: block;
+        width: 100%;
+        padding: 5px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+      }
+      input[type="submit"], input[type="reset"] {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        margin-top: 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      input[type="reset"] {
+        background-color: #f44336;
       }
     </style>
   </head>
@@ -34,5 +72,21 @@
       <li><a href="page2.html">Page 2</a></li>
       <li><a href="contact-us.html">Contact us</a></li>
     </ul>
+    <h2>Feedback Form</h2>
+    <form id="feedback-form" action="#" method="POST">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" placeholder="Enter your name" required>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email" required>
+      <label for="comment">Comment:</label>
+      <textarea id="comment" name="comment" placeholder="Enter your comment" required></textarea>
+      <label for="gender">Gender:</label>
+      <input type="radio" id="male" name="gender" value="male" required>
+      <label for="male">Male</label>
+      <input type="radio" id="female" name="gender" value="female" required>
+      <label for="female">Female</label>
+      <input type="submit" value="Submit Feedback">
+      <input type="reset" value="Cancel">
+    </form>
   </body>
 </html>
